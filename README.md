@@ -38,7 +38,7 @@
 
 ## Contact
 
-For more information on AngularJS please check out http://angularjs.org/
+For more information on Zhaomuwang please check out http://
 
 [7 Zip]: http://www.7-zip.org/
 [angular-seed]: https://github.com/angular/angular-seed
