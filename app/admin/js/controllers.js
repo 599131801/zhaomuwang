@@ -149,7 +149,7 @@ var allModules=angular.module('zmwModules',[])
         }
         $rootScope.$on('oauth:success',function(event, rejection){
             Me.get(null,function(resource){
-                console.log(resource);
+                //console.log(resource);
                 if('ROLE_ADMIN'===resource.role){
                     $window.location.href = '#/home'
                 }else{

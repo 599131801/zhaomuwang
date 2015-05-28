@@ -14,7 +14,7 @@
                             <td class="col-md-2" align="center">昵称</td>
                             <td class="col-md-10">{{userDetail.nickname}}</td>
                             <td rowspan="4">
-                                <div class="row col-sm-3">
+                                <div class="row col-sm-3" ng-show="userDetail.favicon!=null&&userDetail.favicon.length>0">
                                     <img data-src="holder.js/100x100"class="img-thumbnail" src="{{userDetail.favicon}}" style="align-content: center;margin: 10%"/>
                                 </div>
                             </td>
