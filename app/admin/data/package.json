@@ -1,0 +1,15 @@
+{
+  "id": "1212",
+  "variety": "品种",
+  "origin":"产地",
+  "location":"商品销售地",
+  "dimensions":"商品规格（径长）",
+  "quantity":"商品总量",
+  "describe":"商品的描述",
+  "releaseDate":"发布时间",
+  "provider":"供应商",
+  "price":"单价",
+  "coverImg":"封面图",
+  "displayImg":[],
+  "displayVideo":[]
+}

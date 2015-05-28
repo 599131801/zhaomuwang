@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="css/goodsDetail.css"/>
+
+<div class="page-header">
+    <h2 style="margin-left: 10%">商品信息详情</h2>
+</div>
+<div class="row div_mar">
+    <div class="row col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title" >商品基本信息</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped col-md-12">
+                    <tbody>
+                    <tr>
+                        <td rowspan="9" class="col-md-5" id="img_td">
+                            <img  class="img-responsive" src="{{goodsDetail.coverImg}}" id="img_cover"/>
+                        </td>
+                        <td class="col-md-2" align="center">种类</td>
+                        <td class="col-md-5">{{goodsDetail.variety}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2" align="center">销售地</td>
+                        <td class="col-md-5">{{goodsDetail.location}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2" align="center">产地</td>
+                        <td class="col-md-5">{{goodsDetail.origin}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2" align="center">规格</td>
+                        <td class="col-md-5">{{goodsDetail.dimensions}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2" align="center">价格</td>
+                        <td class="col-md-5">{{goodsDetail.price}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2" align="center">库存</td>
+                        <td class="col-md-5">{{goodsDetail.quantity}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2" align="center">发布时间</td>
+                        <td class="col-md-5">{{goodsDetail.releaseDate|date:yyyy-mm-dd}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2" align="center">供应商</td>
+                        <td class="col-md-5">{{goodsDetail.provider}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-2" align="center">描述</td>
+                        <td class="col-md-5">{{goodsDetail.describe}}</td>
+                    </tr>
+                    <tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row div_mar">
+    <div class="row col-md-12" >
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">商品图片展示</h3>
+            </div>
+            <td class="panel-body">
+                <div class="col-md-12"  id="img_div">
+                    <ui id="img_ui" ng-repeat="image in goodsDetail.displayImg">
+                        <li id="img_li"><img  id="img_display" src="{{image.url}}"/></li>
+                    </ui>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row div_mar">
+    <div class="row col-md-12" >
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">商品视频介绍</h3>
+            </div>
+            <div class="panel-body"></div>
+    </div>
+</div>
+</div>

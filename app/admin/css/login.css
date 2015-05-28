@@ -1,0 +1,17 @@
+#login-container {
+	background: url(../img/bg_login.jpg) no-repeat 10px 50px;
+}
+
+#login-panel .panel-body{
+	/*padding: 1em 1em;*/
+}
+#login-panel .form-group {
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 2em;
+  	margin-top: 1em;
+}
+#div_container{
+	border: solid 1px silver;
+	margin-top: 40px;
+}

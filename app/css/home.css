@@ -1,0 +1,10 @@
+/*home page*/
+#carousel-home-generic .carousel-indicators li {
+	width: 40px;
+	background-color: #fff;
+	border: 0;
+}
+#carousel-home-generic .carousel-indicators .active {
+	background-color: #f94100;
+}
+/*end home page*/

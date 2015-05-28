@@ -1,0 +1,42 @@
+#img_cover{
+    max-width: 95%;
+    align-content: center;
+    vertical-align: middle;
+    position: absolute;
+    margin-top: -25%;
+    top: 50%;
+}
+#img_div{
+    border: solid 1px silver;
+    margin-top: 5px;
+    padding: 10px;
+    margin-bottom: 5%;
+}
+#img_ui{
+    margin:0px;
+    padding:0px;
+    list_style:none;
+}
+
+#img_li{
+    width: 50%;
+    height:100%;
+    white-space:nowrap;
+    display:block;
+    float:left;
+    border: solid 1px silver;
+}
+
+#img_display{
+    margin: 10px;
+    padding: 10px;
+}
+#img_td{
+    position: relative;
+}
+.div_mar{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+

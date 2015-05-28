@@ -1,0 +1,58 @@
+.step {
+	position: relative;
+	margin-top: 20px;
+}
+.step>li{
+	position: relative;
+	padding: 10px 20px;
+	width: 320px;
+	height: 40px;
+	background-color: #eee;
+	margin-right: 30px;
+}
+.step>li:before {
+	content: '';
+	position: absolute;
+	left: -20px;
+	width: 0px;
+	height: 0px;
+	top: 0px;
+	border-top: 20px solid #eee;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid #eee;
+}
+.step>li:after {
+	content: '';
+	position: absolute;
+	right: -20px;
+	width: 0px;
+	height: 0px;
+	top: 0px;
+	border-top: 20px solid transparent;
+    border-left: 20px solid #eee;
+    border-bottom: 20px solid transparent;
+}
+
+.step>li.active{
+	background-color: #fa7d00;
+	color: #fff;
+}
+.step>li.active:before {
+	border-top-color: #fa7d00;
+	border-bottom-color: #fa7d00;
+}
+.step>li.active:after {
+	border-left-color: #fa7d00;
+}
+
+.register-form {
+	margin-top: 5em;
+}
+
+.register-form .form-group {
+	margin-bottom: 4em;
+}
+
+.submit:hover,.submit:focus{
+	background-color: #fa7d00;
+}

@@ -1,21 +1,152 @@
 /* app css stylesheet */
 
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, img {
+  margin: 0;
+  padding: 0;
+}
 body {
-
+	position: relative;
+	color: #666;
+	font-family: "Microsoft YaHei","微软雅黑";
+}
+a {
+	outline: 0;
+	text-decoration: none;
 }
 
-ul {
-  margin: 0px;
+a:link, a:visited {
+	color: #999;
 }
 
-.top-menu {
+a:hover, a:active {
+	color: #f94100;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.site-nav {
   background: #f6f6f6;
   border-bottom: 1px solid #e8e8e8;
-  font-size: .9rem;
+  font-size: 1.4rem;
   padding: .3em 0;
 
 }
 
+.header-layout {
+	height: 9em;
+	padding-top: 2em;
+	padding-bottom: auto;
+}
+
+.search-form {
+	border: solid #f94100;
+	border-width: 3px;
+}
+.search-form>* {
+	height: 2.5em;
+}
+.search-form [type=submit] {
+	background: #f94100;
+	color: white;
+	border: 0;
+	padding: 0 2em;
+	margin-right: -1px;
+}
+.search-input {
+  width: 20em;
+  border: 0;
+  padding: 0px 5px;
+}
+.search-input:focus {
+	 outline: -webkit-focus-ring-color auto 0px;
+}
+
+
+
+.navbar-blue {
+	background-color: #005bac;
+	margin-bottom: 0px;
+  	border: 0px;
+  	border-radius: 0px;
+  	background-image: url(/img/bg.jpg);
+}
+
+.navbar-blue .navbar-nav li>a,.navbar-blue .navbar-header a{
+	color: #fff;
+}
+
+.navbar-blue .navbar-brand:hover, .navbar-blue .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navbar-blue .navbar-nav > .active > a, .navbar-blue .navbar-nav > .active > a:hover, .navbar-blue .navbar-nav > .active > a:focus {
+	color: #fff;
+  	background-color: #f94100;
+}
+.navbar-blue .navbar-nav > li > a:hover, .navbar-blue .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #f94100;
+}
+.navbar-blue .navbar-toggle {
+  border-color: #FFF;
+}
+.navbar-blue .navbar-toggle .icon-bar {
+  background-color: #FFF;
+}
+.navbar-blue .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #f94100;
+}
+
+
+
+
+
+
+.view-frame {
+	min-height: 400px;
+}
+
+footer {
+	border-top: 1px solid #ccc;
+}
+.nav-footer {
+	text-align: center;
+	position: relative;
+}
+.nav-footer>li {
+	display: inline-block;
+	border-right: 1px solid #cfcfcf;
+	padding: 1em;
+}
+.nav-footer>li:last-child {
+	border-right: 0px;
+	position: relative;
+	top: 0;
+}
+.nav-footer .fa-circle {
+	color: #666;
+}
+.nav-footer>li {
+	text-align: left;
+	display: inline-table;
+}
+
+
+
+
+
+
+
 .inline-block {
   display: inline-block;
+}
+.text-white {
+	color: #FFF;
 }

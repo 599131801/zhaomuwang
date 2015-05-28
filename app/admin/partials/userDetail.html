@@ -1,0 +1,127 @@
+<div class="page-header" style="margin-top: 0px">
+    <h2 style="margin-left: 10%">用户信息详情</h2>
+</div>
+<div class="row" style="margin-left: 10%;margin-right: 10%">
+        <div class="row col-md-12">
+            <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title" >用户基本信息</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped col-md-9">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-2" align="center">昵称</td>
+                            <td class="col-md-10">{{userDetail.nickname}}</td>
+                            <td rowspan="4">
+                                <div class="row col-sm-3">
+                                    <img data-src="holder.js/100x100"class="img-thumbnail" src="{{userDetail.favicon}}" style="align-content: center;margin: 10%"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">账号</td>
+                            <td class="col-md-10" >{{userDetail.account}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">身份</td>
+                            <td class="col-md-10">{{userDetail.role}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">状态</td>
+                            <td class="col-md-10">{{userDetail.status}}</td>
+                        </tr>
+                    <tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+</div>
+    <div class="row" style="margin-left: 10%;margin-right: 10%">
+        <div class="row col-md-12" >
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">用户详细信息</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped col-md-12">
+                        <tbody>
+                        <tr>
+                            <td class="col-md-2" align="center">姓名</td>
+                            <td class="col-md-10" >{{userDetail.name}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2 " align="center">性别</td>
+                            <td class="col-md-10" >{{userDetail.gender}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">出生年月</td>
+                            <td class="col-md-10">{{userDetail.birthday}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">省份证</td>
+                            <td class="col-md-10">{{userDetail.identity}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">电话</td>
+                            <td class="col-md-10" >{{userDetail.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">手机号</td>
+                            <td class="col-md-10">{{userDetail.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">邮箱</td>
+                            <td class="col-md-10">{{userDetail.email}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">住址</td>
+                            <td class="col-md-10">{{userDetail.address}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">最近登录地址</td>
+                            <td class="col-md-10">{{userDetail.lastLoginIp}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">最近登录时间</td>
+                            <td class="col-md-10">{{userDetail.lastLoginTime}}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-2" align="center">最近信息修改时间</td>
+                            <td class="col-md-10">{{userDetail.lastUpdateTime}}</td>
+                        </tr>
+                        <tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-left: 10%;margin-right: 10%">
+            <div class="row col-md-12" >
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">企业信息</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped col-md-12">
+                            <tbody  ng-show="userDetail.companyName!=null&&userDetail.companyName.length>0">
+                            <tr>
+                                <td class="col-md-2" align="center">公司名称</td>
+                                <td class="col-md-10">{{userDetail.companyName}}</td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-2" align="center">公司地址</td>
+                                <td class="col-md-10" >{{userDetail.company.companyAddress}}</td>
+                            </tr>
+                            <tbody>
+
+                            <tbody ng-show="userDetail.company==null||userDetail.companyName.length<1">
+                                <tr>暂无该信息{{userDetail.company}}</tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+

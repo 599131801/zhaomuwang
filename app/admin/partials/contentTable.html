@@ -1,0 +1,19 @@
+<div class="row" style="margin-bottom: 10px">
+    <div class="col-lg-6"></div>
+<div class="col-lg-6">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for..." ng-model="content">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="search()">Go!</button>
+      </span>
+    </div>
+</div><!-- /.col-lg-6 -->
+</div>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <div class="gridStyle col-sm-12 col-md-12 " ng-grid="gridOptions">
+            <div style="align-content: center" ng-show="isDing">{{tip}}</div>
+        </div>
+
+    </table>
+</div>

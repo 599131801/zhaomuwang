@@ -1,0 +1,20 @@
+{
+    "id":"1",
+    "nickname": "用AngularJS",
+    "account": "1",
+    "indetity":"管理员",
+    "status":"35",
+    "name":"吴闯",
+    "age":12,
+    "sex":"女",
+    "telPhone":"0513-123123123",
+    "phone": "12314",
+    "email": "12314@qq.com",
+    "address":"苏州",
+    "company":{
+        "companyName":"苏州科技学院",
+        "companyAddress":"苏州高新区"
+    },
+    "facvicon":"asdf"
+
+}

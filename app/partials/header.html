@@ -1,0 +1,47 @@
+<!-- header -->
+<header id="header" class="header hidden-xs">
+  <div class="container-fuild">
+    <!-- 顶部导航 -->
+    <div class="site-nav row">
+      <div class="container">
+        <div class="pull-left">
+          <span>嗨，欢迎来到找木网</span>
+          <div ng-switch on="OAuth.isAuthenticated" class="login-status inline-block">
+            <div ng-switch-when="true">
+              <a href="" title=""></a>
+              <a href="" title="">退出</a>
+            </div>
+            <div ng-switch-default>
+              <a href="#/login" title="">请登录</a>
+              <a href="#/register" title="">免费注册</a>
+            </div>
+          </div>
+        </div>
+        <div class="pull-right">
+          <ul class="list-inline">
+            <li><a href="" title="">积分商城</a></li>
+            <li>|</li>
+            <li><a href="" title="">在线客服</a></li>
+            <li>|</li>
+            <li>交易时间：工作日8:30-17:00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /顶部导航 -->
+    <!--  -->
+    <div class="header-layout row">
+      <div class="container">
+        <h1 class="pull-left">找木网</h1>
+        <div id="search" class="header-search pull-right">
+          <form class="search-form form-inline" action="" method="get" accept-charset="utf-8">
+              <input class="search-input" type="text" placeholder="请输入产品规格/材质/品名"/>
+              <button type="submit" class="search"><strong>搜 索</strong></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+  </div>
+</header>
+<!-- /header -->
