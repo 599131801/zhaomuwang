@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="css/goodsDetail.css"/>
-
-<div class="page-header">
+<div class="page-header" style="margin-top: 0px">
     <h2 style="margin-left: 10%">商品信息详情</h2>
 </div>
 <div class="row div_mar">
@@ -13,11 +12,11 @@
                 <table class="table table-striped col-md-12">
                     <tbody>
                     <tr>
-                        <td rowspan="9" class="col-md-5" id="img_td" ng-show="goodsDetail.coverImg!=null&&goodsDetail.coverImg.length>0">
+                        <td rowspan="9" class="col-md-5" id="img_td">
                             <img  class="img-responsive" src="{{goodsDetail.coverImg}}" id="img_cover"/>
                         </td>
                         <td class="col-md-2" align="center">种类</td>
-                        <td class="col-md-5">{{goodsDetail.variety}}</td>
+                        <td class="col-md-5">{{goodsDetail.variety.name}}</td>
                     </tr>
                     <tr>
                         <td class="col-md-2" align="center">销售地</td>
@@ -41,7 +40,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-2" align="center">发布时间</td>
-                        <td class="col-md-5">{{goodsDetail.releaseDate|date:yyyy-mm-dd}}</td>
+                        <td class="col-md-5">{{goodsDetail.releaseDate}}</td>
                     </tr>
                     <tr>
                         <td class="col-md-2" align="center">供应商</td>
@@ -63,11 +62,11 @@
             <div class="panel-heading">
                 <h3 class="panel-title">商品图片展示</h3>
             </div>
-            <td class="panel-body">
+            <div class="panel-body">
                 <div class="col-md-12"  id="img_div">
-                    <ui id="img_ui" ng-repeat="image in goodsDetail.displayImg">
-                        <li id="img_li"><img  id="img_display" src="{{image.url}}"/></li>
-                    </ui>
+                    <ul id="img_ui">
+                        <li id="img_li" ng-repeat="image in goodsDetail.displayImg"><img  id="img_display" ng-src="{{image}}"/></li>
+                    </ul>
                 </div>
             </div>
         </div>

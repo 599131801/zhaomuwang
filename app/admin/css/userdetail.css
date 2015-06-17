@@ -1,0 +1,19 @@
+#img_fav{
+    height: 150px;
+    width: 100%;
+    align-content: center;
+    vertical-align: middle;
+    horiz-align: right;
+    position: absolute;
+    margin-top: -25%;
+    margin-right: 10%;
+    right: 10%;
+    top: 50%;
+    display:table-cell;
+    text-align:center;
+}
+#img_div{
+    left:-100%;
+    margin-left: -100%;
+    position: relative;
+}

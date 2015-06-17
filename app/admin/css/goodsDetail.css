@@ -20,15 +20,18 @@
 
 #img_li{
     width: 50%;
-    height:100%;
-    white-space:nowrap;
+    height:auto;
     display:block;
     float:left;
     border: solid 1px silver;
 }
 
 #img_display{
-    margin: 10px;
+    width: auto;
+    max-width: 400px;
+    max-height: 400px;
+    align-items: center;
+    height: auto;
     padding: 10px;
 }
 #img_td{

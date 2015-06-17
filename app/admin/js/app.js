@@ -1,7 +1,18 @@
 var routerApp = angular.module('zmwApp',
-    ['ui.router', 'ngGrid','angular-oauth2','zmwModules','ZMWFactory']);
+    ['ui.router', 'ngGrid','angular-oauth2','zmwModules','zmwFactory','zmwFilter']);
 
 var config={
+    baseUrl: 'http://121.43.228.7:8080/zhaomuwang',
+    clientId: '7b5a38705d7b3562655925406a652e32',
+    clientSecret: '655f523128212d6e70634446224c2a48',
+    grantPath: '/oauth/token',
+    revokePath: '/oauth/revoke',
+    usersPath:'/api/users',
+    woodsPath:'/api/woods',
+    woodsVarPath:'/api/woods/varieties',
+    mePath:'/api/me'
+};
+/*var config={
     baseUrl: 'http://192.168.137.1:8080/zhaomuwang',
     clientId: '7b5a38705d7b3562655925406a652e32',
     clientSecret: '655f523128212d6e70634446224c2a48',
@@ -9,9 +20,9 @@ var config={
     revokePath: '/oauth/revoke',
     usersPath:'/api/users',
     woodsPath:'/api/woods',
+    woodsVarPath:'/api/woods/varieties',
     mePath:'/api/me'
-};
-
+};*/
 /**
  * 由于整个应用都会和路由打交道，所以这里把$state和$stateParams这两个对象放到$rootScope上，方便其它地方引用和注入。
  * 这里的run方法只会在angular启动的时候运行一次。
@@ -63,7 +74,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                     templateUrl:'partials/main.html'
                 },
                 'goods@home':{
-                    templateUrl:'partials/contentTable.html',
+                    templateUrl:'partials/goodsContentTable.html',
                     controller:'GoodsController'
                 }
             }
@@ -84,33 +95,42 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         }).
         state('home.usermng.admin',{
             url:'/admin',
-            templateUrl:'partials/contentTable.html',
+            templateUrl:'partials/userContentTable.html',
             controller:'UnuseController'
         }).
         state('home.usermng.vip',{
             url:'/vip',
-            templateUrl:'partials/contentTable.html',
+            templateUrl:'partials/userContentTable.html',
             controller:'UnuseController'
         }).
         state('home.usermng.normal',{
             url:'/normal',
-            templateUrl:'partials/contentTable.html',
+            templateUrl:'partials/userContentTable.html',
             controller:'ContentCtrl'
         }).
         state('home.usermng.black',{
             url:'/black',
-            templateUrl:'partials/contentTable.html',
+            templateUrl:'partials/userContentTable.html',
             controller:'UnuseController'
         }).
         state('home.permission',{
-            url:'permission',
+            url:'/permission',
             views:{
                 'main@home':{
                     template:'权限管理'}
             }
         }).
+        state('home.goodsvar',{
+            url:'/goodsvar',
+            views:{
+                'main@home':{
+                    templateUrl:'partials/goodsVar.html',
+                    controller:'GoodsVarController'
+                }
+            }
+        }).
         state('home.report',{
-            url:'report',
+            url:'/report',
             views:{
                 'main@home':{
                     template:'系统报表'
@@ -118,7 +138,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             }
         }).
         state('home.settings',{
-            url:'settings',
+            url:'/settings',
             views:{
                 'main@home':{
                     template:'系统设置'
