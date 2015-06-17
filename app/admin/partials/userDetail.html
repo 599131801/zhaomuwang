@@ -16,7 +16,7 @@
                             <td class="col-md-6">{{userDetail.nickname}}</td>
                             <td rowspan="4">
                                 <div class="row col-md-3" >
-                                    <img  src="{{userDetail.favicon}}"/>
+                                    <img  style="max-height: 150px;max-width: 150px" ng-src="{{userDetail.faviconUrl}}"/>
                                 </div>
                             </td>
                         </tr>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="panel-body">
                         <table class="table table-striped col-md-12">
-                            <tbody  ng-show="userDetail.companyName!=null&&userDetail.companyName.length>0">
+                            <tbody>
                             <tr>
                                 <td class="col-md-2" align="center">公司名称</td>
                                 <td class="col-md-10">{{userDetail.companyName}}</td>
@@ -116,9 +116,9 @@
                             </tr>
                             <tbody>
 
-                            <tbody ng-show="userDetail.company==null||userDetail.companyName.length<1">
+                        <!--    <tbody ng-show="userDetail.company==null||userDetail.companyName.length<1">
                                 <tr>暂无该信息{{userDetail.company}}</tr>
-                            </tbody>
+                            </tbody>-->
 
                         </table>
                     </div>
